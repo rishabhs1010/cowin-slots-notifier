@@ -1,0 +1,54 @@
+{
+  "name": "cowin-slots-notifier",
+  "version": "1.0.0",
+  "description": "A package to provide desktop and whatsapp notification for available slots on cowin portal",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cowin",
+    "covid-19",
+    "vaccination",
+    "cowin vaccination",
+    "notification",
+    "cowin notification",
+    "watcher",
+    "cowin watcher",
+    "notifier",
+    "cowin notifier",
+    "schedule",
+    "slots schedule",
+    "india vaccination notification",
+    "cowin vaccination notification",
+    "cowin whatsapp notification",
+    "desktop notification",
+    "cowin desktop notification"
+  ],
+  "author": "Rishabh Sharma <rishabhs1010@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "moment": "^2.29.1",
+    "node-notifier": "^9.0.1",
+    "twilio": "^3.30.0",
+    "validator": "^13.6.0"
+  },
+  "files": [
+    "src"
+  ],
+  "contributors": [
+    {
+      "name": "Rishabh Sharma",
+      "email": "rishabhs1010@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rishabhs1010/cowin-slots-notifier.git"
+  },
+  "src": {
+    "cowin-slots-notifier": "./src/index.js"
+  }
+}
