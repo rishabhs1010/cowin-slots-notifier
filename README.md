@@ -41,7 +41,7 @@ cowinSlotsNotification(pincode, {
         to: 'phone number attched with twilio'
     }
 });
-
+```
 * pincode - pincode for which you want to search slots
 
 ## Options
