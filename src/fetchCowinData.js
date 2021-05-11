@@ -16,7 +16,8 @@ const getDistrictSlotsData = async (selectedDate, districtCode, ageLimit) => {
                         date: session.date,
                         capacity: session.available_capacity,
                         centerName: center.name,
-                        age_limit: session.min_age_limit
+                        age_limit: session.min_age_limit,
+                        address : `${center.address}, ${center.block_name}`
                     });
                 }
 

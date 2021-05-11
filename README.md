@@ -1,6 +1,8 @@
 # COWIN-SLOTS-NOTIFIER
 
-A npm package to provide desktop and whatsapp notification for available slots on cowin portal
+A npm package to provide desktop and whatsapp notification for available slots on cowin portal.
+
+It will check for available slots in every 10 minutes and notify you once any slots are available in your Area.
 
 # Installation
 

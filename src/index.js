@@ -28,7 +28,7 @@ const getSlotData = async (pincode, ageLimit = 18) => {
         }
     }
     slotsCout > 0 && availableSlots.forEach(center => {
-        slotsmessage.push(`Center :  ${center.centerName}, date : ${center.date}, capacity : ${center.capacity}, age : ${center.age_limit}`);
+        slotsmessage.push(`Center: ${center.centerName}, Address: ${center.address} date: ${center.date}, capacity: ${center.capacity}, age: ${center.age_limit}`);
     });
 
     slotsmessage.forEach(msg => msgString += msg);
