@@ -1,6 +1,6 @@
 {
   "name": "cowin-slots-notifier",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A package to provide desktop and whatsapp notification for available slots on cowin portal",
   "main": "src/index.js",
   "scripts": {
