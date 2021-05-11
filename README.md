@@ -1,4 +1,4 @@
-# COWIN-AVAILABLE-SLOTS
+# COWIN-SLOTS-NOTIFIER
 
 A npm package to provide desktop and whatsapp notification for available slots on cowin portal
 
