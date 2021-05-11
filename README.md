@@ -12,13 +12,15 @@ OR
 
 # Usage
 
-To get the notification over desktop
+Import the functions from cowin-slots-notifier
 
 ```
-const {cowinSlotsNotification, testNotification} = require("cowin-available-slots");
+const {cowinSlotsNotification, testNotification} = require("cowin-slots-notifier");
 ```
 
 To test desktop notification permission -
+You need to allow the desktop notification once it get pop up by above function
+
 ```
 testNotification();
 ```
@@ -39,7 +41,7 @@ cowinSlotsNotification(pincode, {
         to: 'phone number attched with twilio'
     }
 });
-
+```
 * pincode - pincode for which you want to search slots
 
 ## Options
@@ -62,6 +64,12 @@ then below information need to be passed in messageCred
     ```
 
     - This is an optional option as cowin-available-slots provide notification over desktop only if this info is not passed
+
+
+## Minimum Requirment
+
+Windows - windows 8 or more
+MacOS - High Sierra or more
 
 
 
