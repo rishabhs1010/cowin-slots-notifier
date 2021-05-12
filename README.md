@@ -68,6 +68,7 @@ then below information need to be passed in messageCred
     ```
 
     - This is an optional option as cowin-available-slots provide notification over desktop only if this info is not passed
+    - "from" and "to" phone number need to have country code as well. Like "from" will have "+14155238886".
 
 
 ## Minimum Requirment
