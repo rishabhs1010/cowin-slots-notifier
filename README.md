@@ -4,6 +4,8 @@ A npm package to provide desktop and whatsapp notification for available slots o
 
 It will check for available slots in every 10 minutes and notify you once any slots are available in your Area.
 
+Cowin-slots-notifier will notify for slots available within 7 days and it will check for next 14 days as well in case of no slots available from current date.
+
 # Installation
 
 `npm i cowin-slots-notifier`

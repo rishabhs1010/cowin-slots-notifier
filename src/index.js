@@ -22,7 +22,6 @@ const getSlotData = async (pincode, ageLimit = 18) => {
     for (i = 1; i < 3; i++) {
         if (slotsCout == 0) {
             today = moment().add((7 * i), 'd').format('DD-MM-YYYY');
-            // console.log(chalk.greenBright(`also checked for ${today}`));
             availableSlots = await getDistrictSlotsData(today, districtCode, ageLimit);
             slotsCout = availableSlots.length;
         }
@@ -34,6 +33,7 @@ const getSlotData = async (pincode, ageLimit = 18) => {
     slotsmessage.forEach(msg => msgString += msg);
     if (slotsCout > 0) {
         console.log(chalk.green(`Find slots in ${slotsCout} centers at:- ${curentTime}`));
+        sendWhatsapp(`Slots available for ${ageLimit}+`);
         sendDataInCollection(slotsCout, slotsmessage);
     } else {
         console.log(chalk.dim.green(`${curentTime} : No slots available right now for next 3 weeks!`));
@@ -42,7 +42,6 @@ const getSlotData = async (pincode, ageLimit = 18) => {
 
 //make collection of 5 available centers 
 const sendDataInCollection = (count, slotsData) => {
-    sendWhatsapp("Slots available for 18+");
     let msgString = "";
     let counter = 0;
     let msgSend = 0;
