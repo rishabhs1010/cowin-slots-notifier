@@ -10,7 +10,8 @@ let isValidMessageCred = false;
 
 //fetch available slots as per age group
 const getSlotData = async (pincode, ageLimit = 18) => {
-    let today = moment().format('DD-MM-YYYY');
+    try {
+        let today = moment().format('DD-MM-YYYY');
     let curentTime = moment().format('DD-MM-YYYY h:mm:ss a');
     if (districtCode === null) {
         districtCode = await getDistrictId(pincode);
@@ -37,6 +38,11 @@ const getSlotData = async (pincode, ageLimit = 18) => {
         sendDataInCollection(slotsCout, slotsmessage);
     } else {
         console.log(chalk.dim.green(`${curentTime} : No slots available right now for next 3 weeks!`));
+    }
+    }
+    catch (err) {
+        console.log(chalk.red(err.message));
+        console.log(chalk.red("Check above message for issue"));
     }
 };
 

@@ -27,7 +27,6 @@ const getDistrictSlotsData = async (selectedDate, districtCode, ageLimit) => {
         return availableSlotsCenter;
 
     } catch (err) {
-        console.log("error");
         console.log(chalk.red(err.message));
     }
 };
@@ -35,13 +34,16 @@ const getDistrictSlotsData = async (selectedDate, districtCode, ageLimit) => {
 const getDistrictId = async (pincode) => {
     try {
         const districtDetails = await axios.get(`https://api.postalpincode.in/pincode/${pincode}`);
+        let isInvalidPinCode = districtDetails.data[0].Message === "No records found";
+        if (isInvalidPinCode) {
+            throw new Error("No result found for this pincode!, try with other nearest pincode");
+        }
         const postalInfo = districtDetails.data && districtDetails.data[0].PostOffice[0];
         const { State, District } = postalInfo;
         const stateCode = await getStateCode(State);
         const districtCode = await getDistrictCode(stateCode, District);
         return districtCode;
     } catch (err) {
-        console.log("getDistrictId error");
         console.log(chalk.red(err.message));
     }
 }
